@@ -1,31 +1,32 @@
-nav {
-    font-size: 1.5em;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-    font-weight: bold;
-    float: left;
-    width: 200px;
-  }
-
-nav a {
-	text-decoration: none;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This will push the nav to the right */
+  padding: 10px; /* Add some padding */
+  background-color: #fff; /* Adjust as needed */
 }
 
-nav a:link { 
-  color: #FEF6C2; 
+#logo {
+  height: 50px; /* Adjust height as needed */
+  margin-right: 20px; /* Space between logo and nav */
 }
-
-nav a:visited {
-color: #D2B48C;
-}
-
-
-nav a:hover{
-color: #CC9933;
-} 
 
 nav ul {
   list-style-type: none;
-	padding-left: 0;
+  padding-left: 0;
+}
+
+nav ul li {
+  display: inline-block; /* Horizontally align the menu items */
+  margin-left: 20px; /* Add spacing between nav items */
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #FEF6C2;
+}
+
+nav a:hover {
+  color: #CC9933;
 }
