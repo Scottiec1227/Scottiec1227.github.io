@@ -43,7 +43,7 @@ nav ul li {
 nav a {
   text-decoration: none;
   font-size: 1.2em;
-  color: #000000;
+  color: #ffffff;
 }
 
 nav a:hover {
@@ -91,6 +91,10 @@ li{
   font-family: courgette;
 }
 
+p {
+  color: white;
+}
+
 body {
-  background-color: #CC9933;
+  background-color: #013500;
 }
