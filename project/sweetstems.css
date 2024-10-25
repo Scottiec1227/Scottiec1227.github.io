@@ -1,32 +1,96 @@
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* This will push the nav to the right */
-  padding: 10px; /* Add some padding */
-  background-color: #fff; /* Adjust as needed */
+.courgette-regular {
+  font-family: "Courgette", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-#logo {
-  height: 50px; /* Adjust height as needed */
-  margin-right: 20px; /* Space between logo and nav */
+
+#logo-and-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Keep logo on left and nav on right */
+  /* background-color: #dce6e2; */
+  padding: 10px;
+  color: white;
+  
+}
+
+#Logo {
+  height: 300px; /* Adjust logo size */
+  margin-right: 20px;
+}
+
+#heroimage {
+  height: 500px;
+  background-image: url(/Images/wedding2.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
 }
 
 nav ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
+  font-size: large;
 }
 
 nav ul li {
-  display: inline-block; /* Horizontally align the menu items */
-  margin-left: 20px; /* Add spacing between nav items */
+  display: inline-block;
+  margin-left: 20px;
 }
 
 nav a {
   text-decoration: none;
   font-size: 1.2em;
-  color: #FEF6C2;
+  color: #000000;
 }
 
 nav a:hover {
-  color: #CC9933;
+  color: #966709;
+  font-weight: bold;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+/* Style for the gallery container */
+#portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible column widths */
+    grid-gap: 20px; /* Space between grid items */
+    padding: 20px;
+    background-color: #f8f8f8; /* Background color for the gallery */
+}
+
+/* Each portfolio item (image wrapper) */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style for images inside the grid */
+.portfolio-item img {
+    width: 100%; /* Make sure images take full width of the grid item */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Slightly rounded corners */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add hover effect on images */
+.portfolio-item:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+h1{
+  font-family: courgette;
+}
+
+li{
+  font-family: courgette;
+}
+
+body {
+  background-color: #CC9933;
 }
