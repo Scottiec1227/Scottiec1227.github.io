@@ -1,38 +1,30 @@
-.courgette-regular {
-  font-family: "Courgette", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-#heroimage {
-  height: 500px;
-  background-image: url(Images/wedding2.JPG);
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 15px;
+/* General Styles */
+body {
+  background-color: white;
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-
+/* Logo and Navigation */
 #logo-and-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Keep logo on left and nav on right */
-  /* background-color: #dce6e2; */
+  justify-content: space-between;
+  background-color: #AB6309;
   padding: 10px;
   color: white;
-  
 }
 
-#Logo {
-  height: 300px; /* Adjust logo size */
-  margin-right: 20px;
+#logo-and-nav h1 {
+  font-family: "Courgette", cursive;
+  margin: 0;
 }
-
 
 nav ul {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
-  font-size: large;
 }
 
 nav ul li {
@@ -47,54 +39,113 @@ nav a {
 }
 
 nav a:hover {
-  color: #966709;
+  color: #333;
   font-weight: bold;
 }
 
+/* Hero Image Section */
+#heroimage {
+  height: 500px;
+  background-image: url(Images/wedding2.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  border-radius: 15px;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+  color: #333;
+}
+
 h1 {
+  font-family: "Courgette", cursive;
   color: #ffffff;
 }
 
-/* Style for the gallery container */
-#portfolio-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible column widths */
-    grid-gap: 20px; /* Space between grid items */
-    padding: 20px;
-    background-color: #f8f8f8; /* Background color for the gallery */
-}
-
-/* Each portfolio item (image wrapper) */
-.portfolio-item {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Style for images inside the grid */
-.portfolio-item img {
-    width: 100%; /* Make sure images take full width of the grid item */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Slightly rounded corners */
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Add hover effect on images */
-.portfolio-item:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
-h1{
-  font-family: courgette;
-}
-
-li{
-  font-family: courgette;
+h2 {
+  font-family: "Courgette", cursive;
+  color: #333;
 }
 
 p {
-  color: white;
+  font-family: "Karla", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
 }
 
-body {
-  background-color: #013500;
+#portfolio-gallery {
+  grid-template-columns: 1fr; /* Single column for small screens */
+}
+
+#sideimage {
+background: url(Images/event1.jpg) no-repeat center center/cover;
+width: 300px;
+height: 100vh;
+float: left;
+margin-right: 1em;
+}
+
+/* About Section */
+#about h2{
+  font-family: "Courgette", cursive;
+  font-size: 2em;
+  color: #AB6309;
+  margin-bottom: 20px;
+}
+
+
+/* Testimonials Section */
+#testimonials {
+  background-color: #f8f8f8; /* Light background for contrast */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-family: "Courgette", cursive;
+  font-size: 2em;
+  color: #AB6309;
+  margin-bottom: 20px;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-around; /* Distribute boxes evenly */
+  gap: 20px; /* Space between boxes */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.testimonial-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%; /* Adjust width as necessary */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.testimonial-box p {
+  font-family: "Karla", sans-serif;
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial-box h4 {
+  font-family: "Karla", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: #AB6309;
+  margin-top: 10px;
+}
+
+/* Responsive Design for Testimonials */
+@media (max-width: 768px) {
+  .testimonial-box {
+      width: 100%; /* Stacks the boxes on smaller screens */
+  }
 }
