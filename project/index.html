@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="menu.js" defer></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweet Stems Floral</title>
@@ -16,16 +17,18 @@
   <body>
     <div id="logo-and-nav">
       <h1>Sweet Stems Floral</h1>
-      <!-- <img src="Images/SweetIcon.jpg" alt="Sweet Stems Logo" id="Logo"> -->
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
       <nav>
-        <ul>
+        <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="weddings.html">Weddings</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="rentals.html">Rentals</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="more.html">More</a></li>
         </ul>
       </nav>
     </div>
@@ -52,12 +55,12 @@
       <div class="testimonial-container">
         <div class="testimonial-box">
           <p>
-            "Liz did my wedding bouquet and was absolutely amazing to work with!
+            "Liz did our wedding bouquet and was absolutely amazing to work with!
             The flowers were beautiful and absolutely stunning. I would
             definitely recommend her to anyone in need of flowers for their big
             day."
           </p>
-          <h4>- Emily R.</h4>
+          <h4>- Scott C.</h4>
         </div>
         <div class="testimonial-box">
           <p>
@@ -66,16 +69,74 @@
             read minds. I couldn't be happier with all of the hard work she and
             her team did!! I can't thank you enough! "
           </p>
-          <h4>- John D.</h4>
+          <h4>- Chelsea B</h4>
         </div>
         <div class="testimonial-box">
           <p>
             "I seriously can't stoppp thinking about the flowers! I will forever
             be grateful."
           </p>
-          <h4>- Sarah K.</h4>
+          <h4>- Kylie M</h4>
         </div>
       </div>
     </section>
+
+    <section id="contact">
+      <h2>Contact Me!</h2>
+      <form id="contact-form">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Wedding Checkbox Container -->
+        <div id="wedding-checkbox-container">
+            <label for="wedding-yes">Is this appointment for a wedding?</label>
+            <div class="radio-options">
+                <input type="radio" id="wedding-yes" name="wedding" value="yes">
+                <label for="wedding-yes">Yes</label>
+
+                <input type="radio" id="wedding-no" name="wedding" value="no">
+                <label for="wedding-no">No</label>
+            </div>
+        </div>
+
+        <div id="wedding-fields" class="hidden">
+            <label for="wedding-date">Wedding Date:</label>
+            <input type="date" id="wedding-date" name="wedding-date">
+
+            <label for="wedding-location">Wedding Location:</label>
+            <input type="text" id="wedding-location" name="wedding-location">
+        </div>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+<script src="contact.js"></script>
+</body>
+
+    </section>
+
+
+
+<footer>
+  <img src="Images/SweetIcon.jpg" alt="Footer Image" class="footer-image">
+  Copyright &copy; 2024 Sweet Stems Floral<br />
+        <a href="mailto:sweetstems.floral1@gmail.com"
+          >sweetstems.floral1@gmail.com</a>
+    
+
+</footer>
   </body>
 </html>

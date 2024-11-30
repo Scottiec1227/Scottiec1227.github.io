@@ -86,6 +86,7 @@ width: 300px;
 height: 100vh;
 float: left;
 margin-right: 1em;
+border-radius: 15px;
 }
 
 /* About Section */
@@ -96,6 +97,12 @@ margin-right: 1em;
   margin-bottom: 20px;
 }
 
+#contact h2 {
+  font-family: "Courgette", cursive;
+  font-size: 2em;
+  color: #AB6309;
+  margin-bottom: 20px;
+}
 
 /* Testimonials Section */
 #testimonials {
@@ -148,4 +155,165 @@ margin-right: 1em;
   .testimonial-box {
       width: 100%; /* Stacks the boxes on smaller screens */
   }
+}
+
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  /* margin-right: auto; */
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+}
+
+/* Responsive Navigation */
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-list {
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    background-color: #422f17;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    /* border-radius: 10px; */
+    padding: 10px 0;
+  }
+
+  .nav-list.active {
+    display: flex;
+    /* margin-right: auto; */
+  }
+
+  .nav-list li a {
+    padding: 15px 20px;
+  }
+}
+
+/* Contact Form Styles */
+#contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form label {
+  display: block;
+  font-family: "Karla", sans-serif;
+  margin-bottom: 10px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Wedding Checkbox Container */
+#wedding-checkbox-container {
+  display: flex; /* Align question and radio buttons horizontally */
+  align-items: center; /* Vertically align radio buttons with the text */
+  gap: 10px; /* Small gap between the question and the buttons */
+  margin-bottom: 20px;
+}
+
+#wedding-checkbox-container label {
+  font-size: 1.1em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.radio-options {
+  display: inline-flex; /* Display radio buttons horizontally */
+  gap: 10px;
+}
+
+.radio-options input {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.radio-options label {
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+/* Wedding Fields */
+#wedding-fields {
+  margin-top: 20px;
+}
+
+#contact-form button {
+  background-color: #AB6309;
+  color: white;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact-form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  #contact-form .name-field input {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #FFFFFF;
+  color: #AB6309;
+}
+
+.footer-image {
+  float: right;
+  max-width: 100px; /* Adjust the width to your preference */
+  height: auto;     /* Keeps the aspect ratio */
+  display: block;   /* Ensures the image behaves as a block element */
+  margin: 0 auto;   /* Centers the image horizontally */
 }
