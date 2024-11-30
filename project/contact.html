@@ -34,7 +34,52 @@
     <main>
         <div id="heroimage"></div>
         <h1>About Sweet Stems</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, veritatis? Nemo nisi, nostrum aperiam labore  numquam iure inventore sequi sunt vitae adipisci voluptates. Eos natus deserunt alias, similique perferendis fugiat?</p>
+        <section id="contact">
+            <h2>Contact Me!</h2>
+            <form id="contact-form">
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="first-name" required>
+      
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last-name" required>
+      
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+      
+              <label for="phone">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" required>
+      
+              <!-- Wedding Checkbox Container -->
+              <div id="wedding-checkbox-container">
+                  <label for="wedding-yes">Is this appointment for a wedding?</label>
+                  <div class="radio-options">
+                      <input type="radio" id="wedding-yes" name="wedding" value="yes">
+                      <label for="wedding-yes">Yes</label>
+      
+                      <input type="radio" id="wedding-no" name="wedding" value="no">
+                      <label for="wedding-no">No</label>
+                  </div>
+              </div>
+      
+              <div id="wedding-fields" class="hidden">
+                  <label for="wedding-date">Wedding Date:</label>
+                  <input type="date" id="wedding-date" name="wedding-date">
+      
+                  <label for="wedding-location">Wedding Location:</label>
+                  <input type="text" id="wedding-location" name="wedding-location">
+              </div>
+      
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+      
+              <button type="submit">Submit</button>
+          </form>
+      </main>
+      
+      <script src="contact.js"></script>
+      </body>
+      
+          </section>
     </main>
 </body>
 
