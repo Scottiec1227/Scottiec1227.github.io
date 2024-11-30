@@ -53,6 +53,13 @@ nav a:hover {
   border-radius: 15px;
 }
 
+@media (max-width: 768px) {
+  #heroimage {
+    background-attachment: scroll; /* Disables parallax */
+    height: 300px; /* Reduce height for mobile */
+  }
+}
+
 /* Main Content */
 main {
   padding: 20px;
