@@ -308,6 +308,13 @@ border-radius: 15px;
 footer {
   background-color: #FFFFFF;
   color: #AB6309;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;    /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 150px;          /* Set a height for the footer */
+  text-align: center;     /* Center text within the content block */
+  padding: 20px;
 }
 
 .footer-image {
