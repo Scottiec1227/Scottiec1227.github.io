@@ -6,6 +6,11 @@ body {
   padding: 0;
 }
 
+header {
+  width: 100%; /* Ensures the header spans the full screen */
+  margin: 0; /* Removes any default margins */
+}
+
 
 /* Logo and Navigation */
 #logo-and-nav {
@@ -208,7 +213,7 @@ border-radius: 15px;
     position: absolute;
     top: 60px;
     right: 20px;
-    /* border-radius: 10px; */
+        /* border-radius: 10px; */
     padding: 10px 0;
   }
 
@@ -342,13 +347,16 @@ footer {
   align-items: center; /* Center items vertically */
 }
 
+#rental_gallery img {
+  width: 450px; /* Set consistent width for thumbnails */
+  height: 550px; /* Set consistent height */
+  object-fit: cover; /* Crop the image to fit without distortion */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
 @media (max-width: 600px) {
   #rental_gallery {
     grid-template-columns: 1fr;
   }
 }
 
-header {
-  width: 100%; /* Ensures the header spans the full screen */
-  margin: 0; /* Removes any default margins */
-}
