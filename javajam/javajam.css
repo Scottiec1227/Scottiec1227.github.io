@@ -283,3 +283,8 @@ td, th {
 tr:nth-of-type(odd) {
 	background-color: #D2B48E;
 }
+
+#rental_gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}

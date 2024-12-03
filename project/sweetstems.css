@@ -6,6 +6,7 @@ body {
   padding: 0;
 }
 
+
 /* Logo and Navigation */
 #logo-and-nav {
   display: flex;
@@ -46,7 +47,7 @@ nav a:hover {
 /* Hero Image Section */
 #heroimage {
   height: 500px;
-  background-image: url(Images/wedding2.JPG);
+  background-image: url(Images/wedding2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; /* Parallax effect */
@@ -83,8 +84,109 @@ p {
   color: #333;
 }
 
+/* Portfolio Page */
 #portfolio-gallery {
-  grid-template-columns: 1fr; /* Single column for small screens */
+display: flex; /* Use flexbox to center the images */
+flex-wrap: wrap;
+justify-content: center; /* Centers items horizontally */
+align-items: flex-start; /* Align items at the top of the container */
+gap: 10px;
+margin: 0 auto; /* Centers the gallery itself */
+padding: 20px
+}
+
+#portfolio-gallery h3{
+  color: #333;
+  margin: 0px;
+  font-family: "Karla", sans-serif;
+}
+
+#portfolio-gallery .portfolio-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 100%;
+}
+
+#portfolio-gallery .portfolio-item p {
+  margin: 1px 0px 50px 0px;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2em;
+  color: #333;
+  text-align: center
+}
+
+#portfolio-gallery img {
+  width: 100%; /*Ensure image does not exceed its natural size */
+  height: auto;
+  border-radius: 10px; /* Round corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) /* Add subtle shadow */
+}
+
+#portfolio h1{
+  color: #AB6309
+}
+
+/* #single-gallery {
+  display: flex;
+  justify-content: space-around; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+} */
+
+#single-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 10px; /* Space between images */
+  padding: 10px; /* Optional padding */
+}
+
+
+#single-gallery .portfolio-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+  max-width: 100%;
+}
+
+#single-gallery .portfolio-item img {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image fits nicely */
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+/* .image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ */
+
+@media (max-width: 768px) {
+  #single-gallery img {
+    width: 90%;
+  }
+
+  #single-gallery .portfolio-item {
+    width: 90%;
+  }
 }
 
 #sideimage {
@@ -102,6 +204,7 @@ border-radius: 15px;
   font-size: 2em;
   color: #AB6309;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 #contact h2 {
@@ -109,6 +212,7 @@ border-radius: 15px;
   font-size: 2em;
   color: #AB6309;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Testimonials Section */
@@ -247,38 +351,10 @@ border-radius: 15px;
   box-sizing: border-box;
 }
 
-/* Wedding Checkbox Container */
-#wedding-checkbox-container {
-  display: flex; /* Align question and radio buttons horizontally */
-  align-items: center; /* Vertically align radio buttons with the text */
-  gap: 10px; /* Small gap between the question and the buttons */
-  margin-bottom: 20px;
-}
-
 #wedding-checkbox-container label {
   font-size: 1.1em;
   white-space: nowrap;
   flex-shrink: 0;
-}
-
-.radio-options {
-  display: inline-flex; /* Display radio buttons horizontally */
-  gap: 10px;
-}
-
-.radio-options input {
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.radio-options label {
-  font-size: 1em;
-  white-space: nowrap;
-}
-
-/* Wedding Fields */
-#wedding-fields {
-  margin-top: 20px;
 }
 
 #contact-form button {
@@ -312,6 +388,18 @@ border-radius: 15px;
   }
 }
 
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg)
+}
+
 footer {
   background-color: #FFFFFF;
   color: #AB6309;
@@ -330,4 +418,33 @@ footer {
   height: auto;     /* Keeps the aspect ratio */
   display: block;   /* Ensures the image behaves as a block element */
   margin: 0 auto;   /* Centers the image horizontally */
+}
+
+#rental_gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 10px; /* Add space between items */
+  padding: 10px; /* Padding around the gallery */
+}
+
+#rental_gallery img {
+  width: 450px; /* Set consistent width for thumbnails */
+  height: 550px; /* Set consistent height */
+  object-fit: cover; /* Crop the image to fit without distortion */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+#rental_gallery div {
+  text-align: center; /* Center-align captions */
+  padding: 5px;
+}
+
+#rental_gallery p {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #221811;
+}
+
+#rental_gallery h1 {
+  color: #221811; /* Your desired color */
 }
