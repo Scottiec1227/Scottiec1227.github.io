@@ -46,7 +46,7 @@ nav a:hover {
 /* Hero Image Section */
 #heroimage {
   height: 500px;
-  background-image: url(Images/wedding2.JPG);
+  background-image: url(Images/wedding2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; /* Parallax effect */
@@ -83,8 +83,49 @@ p {
   color: #333;
 }
 
+/* Portfolio Page */
 #portfolio-gallery {
-  grid-template-columns: 1fr; /* Single column for small screens */
+display: flex; /* Use flexbox to center the images */
+flex-wrap: wrap;
+justify-content: center; /* Centers items horizontally */
+align-items: flex-start; /* Align items at the top of the container */
+gap: 10px;
+margin: 0 auto; /* Centers the gallery itself */
+padding: 20px
+}
+
+#portfolio-gallery h3{
+  color: #333;
+  margin: 0px;
+  font-family: "Karla", sans-serif;
+}
+
+#portfolio-gallery .portfolio-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 100%;
+}
+
+#portfolio-gallery .portfolio-item p {
+  margin: 1px 0px 50px 0px;
+  font-family: "Karla", sans-serif;
+  font-size: 1.2em;
+  color: #333;
+  text-align: center
+}
+
+#portfolio-gallery img {
+  width: 100%; /*Ensure image does not exceed its natural size */
+  height: auto;
+  border-radius: 10px; /* Round corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) /* Add subtle shadow */
+}
+
+#portfolio h1{
+  color: #AB6309
 }
 
 #sideimage {
@@ -102,6 +143,7 @@ border-radius: 15px;
   font-size: 2em;
   color: #AB6309;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 #contact h2 {
@@ -109,6 +151,7 @@ border-radius: 15px;
   font-size: 2em;
   color: #AB6309;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Testimonials Section */
@@ -247,38 +290,10 @@ border-radius: 15px;
   box-sizing: border-box;
 }
 
-/* Wedding Checkbox Container */
-#wedding-checkbox-container {
-  display: flex; /* Align question and radio buttons horizontally */
-  align-items: center; /* Vertically align radio buttons with the text */
-  gap: 10px; /* Small gap between the question and the buttons */
-  margin-bottom: 20px;
-}
-
 #wedding-checkbox-container label {
   font-size: 1.1em;
   white-space: nowrap;
   flex-shrink: 0;
-}
-
-.radio-options {
-  display: inline-flex; /* Display radio buttons horizontally */
-  gap: 10px;
-}
-
-.radio-options input {
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.radio-options label {
-  font-size: 1em;
-  white-space: nowrap;
-}
-
-/* Wedding Fields */
-#wedding-fields {
-  margin-top: 20px;
 }
 
 #contact-form button {
