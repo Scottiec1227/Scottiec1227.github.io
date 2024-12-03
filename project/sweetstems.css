@@ -36,7 +36,7 @@ nav ul li {
 nav a {
   text-decoration: none;
   font-size: 1.2em;
-  color: #ffffff;
+  color: #AB6309;
 }
 
 nav a:hover {
@@ -69,7 +69,7 @@ main {
 
 h1 {
   font-family: "Courgette", cursive;
-  color: #ffffff;
+  color: #AB6309;
 }
 
 h2 {
@@ -335,29 +335,20 @@ footer {
 
 #rental_gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 10px; /* Add space between items */
-  padding: 10px; /* Padding around the gallery */
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
 }
 
-#rental_gallery img {
-  width: 450px; /* Set consistent width for thumbnails */
-  height: 550px; /* Set consistent height */
-  object-fit: cover; /* Crop the image to fit without distortion */
-  border-radius: 5px; /* Optional: Add rounded corners */
+@media (max-width: 600px) {
+  #rental_gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
-#rental_gallery div {
-  text-align: center; /* Center-align captions */
-  padding: 5px;
-}
-
-#rental_gallery p {
-  margin-top: 5px;
-  font-size: 0.9em;
-  color: #221811;
-}
-
-#rental_gallery h1 {
-  color: #221811; /* Your desired color */
+header {
+  width: 100%; /* Ensures the header spans the full screen */
+  margin: 0; /* Removes any default margins */
 }
