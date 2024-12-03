@@ -11,13 +11,12 @@ header {
   margin: 0; /* Removes any default margins */
 }
 
-
 /* Logo and Navigation */
 #logo-and-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #AB6309;
+  background-color: #ab6309;
   padding: 10px;
   color: white;
 }
@@ -41,7 +40,7 @@ nav ul li {
 nav a {
   text-decoration: none;
   font-size: 1.2em;
-  color: #AB6309;
+  color: #ab6309;
 }
 
 nav a:hover {
@@ -72,12 +71,13 @@ main {
   color: #333;
 }
 
+
+
 h1 {
   font-family: "Courgette", cursive;
   color: #ffffff;
 }
-
-h2 {
+   h2 {
   font-family: "Courgette", cursive;
   color: #333;
 }
@@ -89,31 +89,29 @@ p {
   color: #333;
 }
 
-#portfolio-gallery {
-  grid-template-columns: 1fr; /* Single column for small screens */
-}
 
 #sideimage {
-background: url(Images/event1.jpg) no-repeat center center/cover;
-width: 300px;
-height: 100vh;
-float: left;
-margin-right: 1em;
-border-radius: 15px;
+  background: url(Images/event1.jpg) no-repeat center center/cover;
+  width: 300px;
+  min-width: 300px;
+  float: left;
+  margin-right: 1em;
+  border-radius: 15px;
+  min-height: 300px;
 }
 
 /* About Section */
-#about h2{
+#about h2 {
   font-family: "Courgette", cursive;
   font-size: 2em;
-  color: #AB6309;
+  color: #ab6309;
   margin-bottom: 20px;
 }
 
 #contact h2 {
   font-family: "Courgette", cursive;
   font-size: 2em;
-  color: #AB6309;
+  color: #ab6309;
   margin-bottom: 20px;
 }
 
@@ -127,7 +125,7 @@ border-radius: 15px;
 #testimonials h2 {
   font-family: "Courgette", cursive;
   font-size: 2em;
-  color: #AB6309;
+  color: #ab6309;
   margin-bottom: 20px;
 }
 
@@ -159,17 +157,16 @@ border-radius: 15px;
   font-family: "Karla", sans-serif;
   font-size: 1em;
   font-weight: bold;
-  color: #AB6309;
+  color: #ab6309;
   margin-top: 10px;
 }
 
 /* Responsive Design for Testimonials */
 @media (max-width: 768px) {
   .testimonial-box {
-      width: 100%; /* Stacks the boxes on smaller screens */
+    width: 100%; /* Stacks the boxes on smaller screens */
   }
 }
-
 
 /* Hamburger Menu */
 .menu-toggle {
@@ -213,7 +210,7 @@ border-radius: 15px;
     position: absolute;
     top: 60px;
     right: 20px;
-        /* border-radius: 10px; */
+    /* border-radius: 10px; */
     padding: 10px 0;
   }
 
@@ -288,7 +285,7 @@ border-radius: 15px;
 }
 
 #contact-form button {
-  background-color: #AB6309;
+  background-color: #ab6309;
   color: white;
   border: none;
   padding: 15px;
@@ -319,44 +316,91 @@ border-radius: 15px;
 }
 
 footer {
-  background-color: #FFFFFF;
-  color: #AB6309;
+  background-color: #ffffff;
+  color: #ab6309;
   display: flex;
   flex-direction: column; /* Stack content vertically */
-  align-items: center;    /* Center horizontally */
+  align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */
-  height: 150px;          /* Set a height for the footer */
-  text-align: center;     /* Center text within the content block */
+  height: 150px; /* Set a height for the footer */
+  text-align: center; /* Center text within the content block */
   padding: 20px;
 }
 
 .footer-image {
   float: right;
   max-width: 100px; /* Adjust the width to your preference */
-  height: auto;     /* Keeps the aspect ratio */
-  display: block;   /* Ensures the image behaves as a block element */
-  margin: 0 auto;   /* Centers the image horizontally */
+  height: auto; /* Keeps the aspect ratio */
+  display: block; /* Ensures the image behaves as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
 }
 
 #rental_gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+  gap: 20px; /* Adds space between items */
   padding: 10px;
-  justify-items: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  justify-items: center; /* Centers items horizontally within grid cells */
+}
+
+#rental_gallery div {
+  text-align: center; /* Ensures the text aligns with images */
 }
 
 #rental_gallery img {
-  width: 450px; /* Set consistent width for thumbnails */
-  height: 550px; /* Set consistent height */
-  object-fit: cover; /* Crop the image to fit without distortion */
-  border-radius: 5px; /* Optional: Add rounded corners */
+  width: 100%; /* Ensures images scale within their containers */
+  max-width: 300px; /* Prevents excessive size */
+  height: auto; /* Keeps aspect ratio */
+  object-fit: cover; /* Crops if necessary */
+  border-radius: 5px; /* Optional rounded corners */
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #rental_gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stacks items vertically on smaller screens */
   }
 }
 
+#portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates flexible columns */
+  gap: 20px; /* Adds space between items */
+  padding: 10px;
+  justify-items: center; /* Centers items horizontally in the grid */
+}
+
+#portfolio-gallery figure {
+  margin: 0; /* Removes default margin around figure */
+  text-align: center; /* Centers content inside each figure */
+}
+
+#portfolio-gallery img {
+  width: 100%; /* Makes images scale within their containers */
+  max-width: 300px; /* Ensures images don't get too large */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Crops if necessary */
+  border-radius: 5px; /* Optional: Rounds the corners */
+}
+
+#portfolio-gallery figcaption {
+  margin-top: 10px;
+  font-size: 0.9em; /* Slightly smaller text for captions */
+  color: #666;
+  font-family: "Karla", sans-serif;
+}
+
+@media (max-width: 768px) {
+  #portfolio-gallery {
+      grid-template-columns: 1fr; /* Stacks items in one column on smaller screens */
+  }
+}
+
+
+#portfolio-gallery figcaption {
+  margin-top: 10px;
+  font-size: 1.5em; /* Match the size of an h2 */
+  font-family: "Courgette", cursive; /* Match the font family of h2 */
+  color: #333; /* Match the color of h2 */
+  text-align: center; /* Ensure the caption is centered */
+  font-weight: bold; /* Optional: Adds weight to resemble h2 */
+}
