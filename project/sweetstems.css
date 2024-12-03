@@ -6,6 +6,7 @@ body {
   padding: 0;
 }
 
+
 /* Logo and Navigation */
 #logo-and-nav {
   display: flex;
@@ -330,4 +331,33 @@ footer {
   height: auto;     /* Keeps the aspect ratio */
   display: block;   /* Ensures the image behaves as a block element */
   margin: 0 auto;   /* Centers the image horizontally */
+}
+
+#rental_gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 10px; /* Add space between items */
+  padding: 10px; /* Padding around the gallery */
+}
+
+#rental_gallery img {
+  width: 450px; /* Set consistent width for thumbnails */
+  height: 550px; /* Set consistent height */
+  object-fit: cover; /* Crop the image to fit without distortion */
+  border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+#rental_gallery div {
+  text-align: center; /* Center-align captions */
+  padding: 5px;
+}
+
+#rental_gallery p {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #221811;
+}
+
+#rental_gallery h1 {
+  color: #221811; /* Your desired color */
 }
