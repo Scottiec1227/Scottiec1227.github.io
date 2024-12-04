@@ -6,13 +6,17 @@ body {
   padding: 0;
 }
 
+header {
+  width: 100%; /* Ensures the header spans the full screen */
+  margin: 0; /* Removes any default margins */
+}
 
 /* Logo and Navigation */
 #logo-and-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #AB6309;
+  background-color: #ab6309;
   padding: 10px;
   color: white;
 }
@@ -36,7 +40,7 @@ nav ul li {
 nav a {
   text-decoration: none;
   font-size: 1.2em;
-  color: #ffffff;
+  color: #ab6309;
 }
 
 nav a:hover {
@@ -47,7 +51,7 @@ nav a:hover {
 /* Hero Image Section */
 #heroimage {
   height: 500px;
-  background-image: url(Images/wedding2.jpg);
+  background-image: url(Images/wedding2.JPG);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; /* Parallax effect */
@@ -67,12 +71,13 @@ main {
   color: #333;
 }
 
+
+
 h1 {
   font-family: "Courgette", cursive;
   color: #ffffff;
 }
-
-h2 {
+   h2 {
   font-family: "Courgette", cursive;
   color: #333;
 }
@@ -84,135 +89,30 @@ p {
   color: #333;
 }
 
-/* Portfolio Page */
-#portfolio-gallery {
-display: flex; /* Use flexbox to center the images */
-flex-wrap: wrap;
-justify-content: center; /* Centers items horizontally */
-align-items: flex-start; /* Align items at the top of the container */
-gap: 10px;
-margin: 0 auto; /* Centers the gallery itself */
-padding: 20px
-}
-
-#portfolio-gallery h3{
-  color: #333;
-  margin: 0px;
-  font-family: "Karla", sans-serif;
-}
-
-#portfolio-gallery .portfolio-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  max-width: 100%;
-}
-
-#portfolio-gallery .portfolio-item p {
-  margin: 1px 0px 50px 0px;
-  font-family: "Karla", sans-serif;
-  font-size: 1.2em;
-  color: #333;
-  text-align: center
-}
-
-#portfolio-gallery img {
-  width: 100%; /*Ensure image does not exceed its natural size */
-  height: auto;
-  border-radius: 10px; /* Round corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) /* Add subtle shadow */
-}
-
-#portfolio h1{
-  color: #AB6309
-}
-
-/* #single-gallery {
-  display: flex;
-  justify-content: space-around; 
-  gap: 20px; 
-  flex-wrap: wrap; 
-} */
-
-#single-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-  gap: 10px; /* Space between images */
-  padding: 10px; /* Optional padding */
-}
-
-
-#single-gallery .portfolio-item {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 45%;
-  max-width: 100%;
-}
-
-#single-gallery .portfolio-item img {
-  width: 100%; /* Make images responsive */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image fits nicely */
-  border-radius: 8px; /* Optional rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional shadow */
-}
-
-/* .image-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 75%;
-  overflow: hidden;
-}
-
-.image-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
- */
-
-@media (max-width: 768px) {
-  #single-gallery img {
-    width: 90%;
-  }
-
-  #single-gallery .portfolio-item {
-    width: 90%;
-  }
-}
 
 #sideimage {
-background: url(Images/event1.jpg) no-repeat center center/cover;
-width: 300px;
-height: 100vh;
-float: left;
-margin-right: 1em;
-border-radius: 15px;
+  background: url(Images/event1.jpg) no-repeat center center/cover;
+  width: 300px;
+  min-width: 300px;
+  float: left;
+  margin-right: 1em;
+  border-radius: 15px;
+  min-height: 600px;
 }
 
 /* About Section */
-#about h2{
+#about h2 {
   font-family: "Courgette", cursive;
   font-size: 2em;
-  color: #AB6309;
+  color: #ab6309;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 #contact h2 {
   font-family: "Courgette", cursive;
   font-size: 2em;
-  color: #AB6309;
+  color: #ab6309;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 /* Testimonials Section */
@@ -225,7 +125,7 @@ border-radius: 15px;
 #testimonials h2 {
   font-family: "Courgette", cursive;
   font-size: 2em;
-  color: #AB6309;
+  color: #ab6309;
   margin-bottom: 20px;
 }
 
@@ -257,17 +157,16 @@ border-radius: 15px;
   font-family: "Karla", sans-serif;
   font-size: 1em;
   font-weight: bold;
-  color: #AB6309;
+  color: #ab6309;
   margin-top: 10px;
 }
 
 /* Responsive Design for Testimonials */
 @media (max-width: 768px) {
   .testimonial-box {
-      width: 100%; /* Stacks the boxes on smaller screens */
+    width: 100%; /* Stacks the boxes on smaller screens */
   }
 }
-
 
 /* Hamburger Menu */
 .menu-toggle {
@@ -351,14 +250,42 @@ border-radius: 15px;
   box-sizing: border-box;
 }
 
+/* Wedding Checkbox Container */
+#wedding-checkbox-container {
+  display: flex; /* Align question and radio buttons horizontally */
+  align-items: center; /* Vertically align radio buttons with the text */
+  gap: 10px; /* Small gap between the question and the buttons */
+  margin-bottom: 20px;
+}
+
 #wedding-checkbox-container label {
   font-size: 1.1em;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
+.radio-options {
+  display: inline-flex; /* Display radio buttons horizontally */
+  gap: 10px;
+}
+
+.radio-options input {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.radio-options label {
+  font-size: 1em;
+  white-space: nowrap;
+}
+
+/* Wedding Fields */
+#wedding-fields {
+  margin-top: 20px;
+}
+
 #contact-form button {
-  background-color: #AB6309;
+  background-color: #ab6309;
   color: white;
   border: none;
   padding: 15px;
@@ -388,63 +315,116 @@ border-radius: 15px;
   }
 }
 
-.arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg)
-}
-
 footer {
-  background-color: #FFFFFF;
-  color: #AB6309;
+  background-color: #ffffff;
+  color: #ab6309;
   display: flex;
   flex-direction: column; /* Stack content vertically */
-  align-items: center;    /* Center horizontally */
+  align-items: center; /* Center horizontally */
   justify-content: center; /* Center vertically */
-  height: 150px;          /* Set a height for the footer */
-  text-align: center;     /* Center text within the content block */
+  height: 150px; /* Set a height for the footer */
+  text-align: center; /* Center text within the content block */
   padding: 20px;
 }
 
 .footer-image {
   float: right;
   max-width: 100px; /* Adjust the width to your preference */
-  height: auto;     /* Keeps the aspect ratio */
-  display: block;   /* Ensures the image behaves as a block element */
-  margin: 0 auto;   /* Centers the image horizontally */
+  height: auto; /* Keeps the aspect ratio */
+  display: block; /* Ensures the image behaves as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
 }
 
 #rental_gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 10px; /* Add space between items */
-  padding: 10px; /* Padding around the gallery */
-}
-
-#rental_gallery img {
-  width: 450px; /* Set consistent width for thumbnails */
-  height: 550px; /* Set consistent height */
-  object-fit: cover; /* Crop the image to fit without distortion */
-  border-radius: 5px; /* Optional: Add rounded corners */
+  grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+  gap: 20px; /* Adds space between items */
+  padding: 10px;
+  justify-items: center; /* Centers items horizontally within grid cells */
 }
 
 #rental_gallery div {
-  text-align: center; /* Center-align captions */
-  padding: 5px;
+  text-align: center; /* Ensures the text aligns with images */
 }
 
-#rental_gallery p {
-  margin-top: 5px;
-  font-size: 0.9em;
-  color: #221811;
+#rental_gallery img {
+  width: 100%; /* Ensures images scale within their containers */
+  max-width: 300px; /* Prevents excessive size */
+  height: auto; /* Keeps aspect ratio */
+  object-fit: cover; /* Crops if necessary */
+  border-radius: 5px; /* Optional rounded corners */
 }
 
-#rental_gallery h1 {
-  color: #221811; /* Your desired color */
+@media (max-width: 768px) {
+  #rental_gallery {
+    grid-template-columns: 1fr; /* Stacks items vertically on smaller screens */
+  }
+}
+
+#portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Creates flexible columns */
+  gap: 20px; /* Adds space between items */
+  padding: 10px;
+  justify-items: center; /* Centers items horizontally in the grid */
+}
+
+#portfolio-gallery figure {
+  margin: 0; /* Removes default margin around figure */
+  text-align: center; /* Centers content inside each figure */
+}
+
+#portfolio-gallery img {
+  width: 100%; /* Makes images scale within their containers */
+  max-width: 300px; /* Ensures images don't get too large */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Crops if necessary */
+  border-radius: 5px; /* Optional: Rounds the corners */
+}
+
+#portfolio-gallery figcaption {
+  margin-top: 10px;
+  font-size: 0.9em; /* Slightly smaller text for captions */
+  color: #666;
+  font-family: "Karla", sans-serif;
+}
+
+@media (max-width: 768px) {
+  #portfolio-gallery {
+      grid-template-columns: 1fr; /* Stacks items in one column on smaller screens */
+  }
+}
+
+
+#portfolio-gallery figcaption {
+  margin-top: 10px;
+  font-size: 1.5em; /* Match the size of an h2 */
+  font-family: "Courgette", cursive; /* Match the font family of h2 */
+  color: #333; /* Match the color of h2 */
+  text-align: center; /* Ensure the caption is centered */
+  font-weight: bold; /* Optional: Adds weight to resemble h2 */
+}
+
+
+/* Single Gallery */
+#single-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
+  gap: 20px; /* Space between items */
+  padding: 10px;
+  justify-items: center; /* Centers items in their cells */
+}
+
+.portfolio-item img {
+  width: 100%; /* Scale image to fit the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Crop if necessary */
+  max-width: 300px; /* Prevent excessive size */
+  border-radius: 5px; /* Optional rounded corners */
+}
+
+/* Optional: Add hover effect */
+.portfolio-item img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  transition: transform 0.3s ease;
 }
