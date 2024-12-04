@@ -51,7 +51,7 @@ nav a:hover {
 /* Hero Image Section */
 #heroimage {
   height: 500px;
-  background-image: url(Images/wedding2.JPG);
+  background-image: url(Images/wedding2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; /* Parallax effect */
@@ -106,6 +106,7 @@ p {
   font-size: 2em;
   color: #ab6309;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 #contact h2 {
@@ -113,6 +114,7 @@ p {
   font-size: 2em;
   color: #ab6309;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Testimonials Section */
@@ -250,40 +252,6 @@ p {
   box-sizing: border-box;
 }
 
-/* Wedding Checkbox Container */
-#wedding-checkbox-container {
-  display: flex; /* Align question and radio buttons horizontally */
-  align-items: center; /* Vertically align radio buttons with the text */
-  gap: 10px; /* Small gap between the question and the buttons */
-  margin-bottom: 20px;
-}
-
-#wedding-checkbox-container label {
-  font-size: 1.1em;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.radio-options {
-  display: inline-flex; /* Display radio buttons horizontally */
-  gap: 10px;
-}
-
-.radio-options input {
-  margin: 0;
-  flex-shrink: 0;
-}
-
-.radio-options label {
-  font-size: 1em;
-  white-space: nowrap;
-}
-
-/* Wedding Fields */
-#wedding-fields {
-  margin-top: 20px;
-}
-
 #contact-form button {
   background-color: #ab6309;
   color: white;
@@ -369,6 +337,14 @@ footer {
   justify-items: center; /* Centers items horizontally in the grid */
 }
 
+#portfolio-header {
+  text-align: center;
+  font-family: "Courgette", cursive;
+  font-size: 1.5em;
+  color: #ab6309;
+  text-decoration-line: underline;
+}
+
 #portfolio-gallery figure {
   margin: 0; /* Removes default margin around figure */
   text-align: center; /* Centers content inside each figure */
@@ -407,6 +383,13 @@ footer {
 
 
 /* Single Gallery */
+/* #album-header{
+  text-align: center;
+  font-family: "Courgette", cursive;
+  font-size: 1.5em;
+  color: #ab6309;
+} */
+
 #single-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Flexible columns */
