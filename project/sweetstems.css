@@ -51,11 +51,21 @@ nav a:hover {
 /* Hero Image Section */
 #heroimage {
   height: 500px;
-  background-image: url(Images/wedding2.jpg);
+  background-image: url(Images/wedding1.JPG);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; /* Parallax effect */
+  /* background-attachment: fixed; Parallax effect */
   border-radius: 15px;
+}
+
+#sideimage {
+  background: url(Images/event1.jpg) no-repeat center center/cover;
+  width: 300px;
+  min-width: 300px;
+  float: left;
+  margin-right: 1em;
+  border-radius: 15px;
+  min-height: 600px;
 }
 
 @media (max-width: 768px) {
@@ -74,6 +84,7 @@ main {
 
 
 h1 {
+  text-decoration: none;
   font-family: "Courgette", cursive;
   color: #ffffff;
 }
@@ -90,15 +101,6 @@ p {
 }
 
 
-#sideimage {
-  background: url(Images/event1.jpg) no-repeat center center/cover;
-  width: 300px;
-  min-width: 300px;
-  float: left;
-  margin-right: 1em;
-  border-radius: 15px;
-  min-height: 600px;
-}
 
 /* About Section */
 #about h2 {
@@ -110,6 +112,14 @@ p {
 }
 
 #contact h2 {
+  font-family: "Courgette", cursive;
+  font-size: 2em;
+  color: #ab6309;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+ h2 {
   font-family: "Courgette", cursive;
   font-size: 2em;
   color: #ab6309;
@@ -284,6 +294,7 @@ p {
 }
 
 footer {
+  clear: both;
   background-color: #ffffff;
   color: #ab6309;
   display: flex;
