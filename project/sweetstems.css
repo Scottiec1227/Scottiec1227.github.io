@@ -51,7 +51,7 @@ nav a:hover {
 /* Hero Image Section */
 #heroimage {
   height: 500px;
-  background-image: url(Images/wedding1.jpg);
+  background-image: url(Images/wedding1.JPG);
   background-repeat: no-repeat;
   background-size: cover;
   /* background-attachment: fixed; Parallax effect */
